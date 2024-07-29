@@ -1,12 +1,68 @@
-.green {
-  color: #465929;
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  text-align: center;
-}
 /* для зміни стилю всіх h2  
 h2 {  
   color: blueviolet;
-} */
+} 
+  зміна за атрибутами
+ [type] {
+}
+ зміна за id
+#traditions-section {
+  color: red;
+}
+ */
+/*:focus використовуємо для полів вводу*/
+
+:root {
+  --color-brand-light: #819b57;
+  --color-brand-darker: #465929;
+  --color-primary-light: #faf4ea;
+  --color-primary-dark: #31261a;
+}
+
+/* BASE */
+body {
+  color: var(--color-primary-dark);
+}
+ul {
+  /*прибирає кружечки*/
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* BUTTON */
+.button {
+  color: var(--color-primary-light);
+  background: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: transparent;
+  color: var(--color-brand-darker);
+}
+/* LINK */
+.link {
+  color: var(--color-primary-light);
+}
+.link:hover {
+  color: var(--color-brand-light);
+}
+/* HERO SECTION */
+.hero-title {
+  color: var(--color-primary-light);
+}
+.accent {
+  color: var(--color-brand-light);
+}
+/* ADVANTAGES SECTION */
+.advantages-list {
+  background-color: var(--color-brand-light);
+  color: var(--color-primary-light);
+}
+
+.section-title {
+  color: var(--color-primary-dark);
+}
