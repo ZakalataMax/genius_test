@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background-color: burlywood;
+  padding: 16px 42px;
+  border: 5px solid darkred;
+  margin: 10px;
+  display: inline-block;
+}
+
+.box:nth-child(2n) {
+  background-color: aquamarine;
+}

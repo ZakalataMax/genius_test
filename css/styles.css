@@ -12,6 +12,11 @@ h2 {
  */
 /*:focus використовуємо для полів вводу*/
 
+/* 
+* {
+  box-sizing: border-box; padding i border всередині width i length    content-box padding i borderнакладаються згори 
+} */
+
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Poppins';
@@ -47,35 +52,64 @@ h2 {
   --color-primary-light: #faf4ea;
   --color-primary-dark: #31261a;
 }
-
+* {
+  box-sizing: border-box;
+}
 /* BASE */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
 body {
   color: var(--color-primary-dark);
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 18px;
+  margin: 0;
 }
 ul {
-  /*прибирає кружечки*/
-  list-style-type: none;
+  margin: 0;
+  list-style-type: none; /*прибирає кружечки*/
 }
 a {
   color: inherit;
+}
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.section {
+  padding: 48px 0;
 }
 /* BUTTON */
 button {
   font-size: 18px;
 }
 .button {
+  padding: 16px 32px;
   color: var(--color-primary-light);
   background: var(--color-brand-light);
   border: 2px solid var(--color-brand-light);
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
 }
 .button:hover {
   background-color: transparent;
-  font-weight: 600;
   color: var(--color-brand-darker);
 }
 /* LINK */
@@ -95,12 +129,19 @@ button {
   line-height: 1.3125;
   text-align: center;
 }
-#traditions-section .section-title,
-#contacts-section .section-title {
+.section-title .accent {
+  color: var(--color-brand-darker);
+}
+.traditions-section .section-title,
+.contacts-section .section-title {
   text-align: left;
 }
 /* HERO SECTION */
+.hero-section {
+  padding: 272px 0;
+}
 .hero-title {
+  margin-bottom: 0;
   color: var(--color-primary-light);
   font-weight: 900;
   font-size: 128px;
@@ -110,6 +151,11 @@ button {
   color: var(--color-brand-light);
 }
 /* ADVANTAGES SECTION */
+.advantages-section {
+  padding-top: 0;
+  background-color: var(--color-brand-light);
+}
+
 .advantages-list {
   background-color: var(--color-brand-light);
   color: var(--color-primary-light);
@@ -118,30 +164,49 @@ button {
 }
 
 /* Traditions Section */
-#traditions-section span {
+.traditions-section {
+  padding-top: 96px;
+}
+.traditions-section .container {
+  padding: 0 16px;
+}
+.traditions-section span {
   font-weight: 600;
 }
 .traditions-text-uppercase span {
   text-transform: uppercase;
 }
-
+.traditions-title {
+  margin-bottom: 42px;
+}
 /* Chiefs Section */
-#chiefs-section h3 {
+.chiefs-section h3 {
   font-weight: 600;
   font-size: 40px;
+  margin-bottom: 16px;
+}
+.chiefs-title {
+  margin-bottom: 80px;
 }
 /* Format Section */
-#formats-section article {
+.formats-section article {
   color: var(--color-primary-light);
   font-weight: 600;
+  font-size: 24px;
+}
+.formats-title {
+  margin-bottom: 80px;
 }
 .formats-text {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
 }
 /* Contacts  Section */
-#contacts-section p {
+.contacts-section p {
   color: var(--color-brand-darker);
+}
+.contacts-title {
+  margin-bottom: 16px;
 }
 /* Footer */
 footer address {
