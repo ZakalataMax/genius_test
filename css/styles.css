@@ -79,6 +79,7 @@ body {
 }
 ul {
   margin: 0;
+  padding: 0;
   list-style-type: none; /*прибирає кружечки*/
 }
 a {
@@ -136,6 +137,28 @@ button {
 .contacts-section .section-title {
   text-align: left;
 }
+/* HEADER */
+.header {
+  /* temp  */
+  background-color: lightgray;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
 /* HERO SECTION */
 .hero-section {
   padding: 272px 0;
@@ -152,18 +175,30 @@ button {
 }
 /* ADVANTAGES SECTION */
 .advantages-section {
-  padding-top: 0;
   background-color: var(--color-brand-light);
 }
 
 .advantages-list {
-  background-color: var(--color-brand-light);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.advantages-item {
   color: var(--color-primary-light);
   font-weight: 300;
   font-size: 20px;
 }
 
 /* Traditions Section */
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.traditions-content {
+  max-width: 710px;
+}
 .traditions-section {
   padding-top: 96px;
 }
@@ -175,6 +210,9 @@ button {
 }
 .traditions-text-uppercase span {
   text-transform: uppercase;
+}
+.traditions-text {
+  max-width: 330px;
 }
 .traditions-title {
   margin-bottom: 42px;
@@ -189,6 +227,10 @@ button {
   margin-bottom: 80px;
 }
 /* Format Section */
+.formats-section {
+  /*temp*/
+  background-color: lightgray;
+}
 .formats-section article {
   color: var(--color-primary-light);
   font-weight: 600;
@@ -201,6 +243,24 @@ button {
   font-weight: 300;
   font-size: 14px;
 }
+.formats-card {
+  border: 2px solid black; /*temp*/
+  border-radius: 16px;
+  padding: 24px;
+  /*max-width: 350px;
+  height: 444px;
+   background-image: url(/images/baker-nastya.jpg);
+  background-size: 100% 100%; */
+}
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+.formats-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 /* Contacts  Section */
 .contacts-section p {
   color: var(--color-brand-darker);
