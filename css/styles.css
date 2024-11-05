@@ -162,6 +162,8 @@ button {
 /* HERO SECTION */
 .hero-section {
   padding: 272px 0;
+  /* temp */
+  background-color: grey;
 }
 .hero-title {
   margin-bottom: 0;
@@ -269,6 +271,10 @@ button {
   margin-bottom: 16px;
 }
 /* Footer */
+footer {
+  /* temp */
+  background-color: grey;
+}
 footer address {
   font-weight: 300;
   font-size: 16px;
