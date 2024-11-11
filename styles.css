@@ -51,6 +51,7 @@ h2 {
   --color-brand-darker: #465929;
   --color-primary-light: #faf4ea;
   --color-primary-dark: #31261a;
+  --color-secondary-dark: #a18268;
 }
 * {
   box-sizing: border-box;
@@ -72,6 +73,7 @@ p {
 }
 body {
   color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -127,7 +129,10 @@ button {
   color: var(--color-primary-dark);
   font-weight: 900;
   font-size: 64px;
-  line-height: 1.3125;
+  line-height: 1.3;
+  text-align: center;
+}
+.section-title.centered {
   text-align: center;
 }
 .section-title .accent {
@@ -226,13 +231,23 @@ button {
   margin-bottom: 16px;
 }
 .chiefs-title {
-  margin-bottom: 80px;
+  max-width: 520px;
+  margin: 0 auto 80px;
+}
+.chiefs-title::after,
+.chiefs-title::before {
+  display: block;
+  width: 352px;
+  border: 2px solid #cfcfbc;
+  content: '';
+  position: absolute;
+}
+.chief-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
 }
 /* Format Section */
-.formats-section {
-  /*temp*/
-  background-color: lightgray;
-}
 .formats-section article {
   color: var(--color-primary-light);
   font-weight: 600;
@@ -246,21 +261,28 @@ button {
   font-size: 14px;
 }
 .formats-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 2px solid black; /*temp*/
   border-radius: 16px;
   padding: 24px;
-  /*max-width: 350px;
-  height: 444px;
-   background-image: url(/images/baker-nastya.jpg);
-  background-size: 100% 100%; */
+  background: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
 }
 .formats-item {
+  display: flex;
   flex-basis: calc((100% - 40px) / 3);
 }
 .formats-list {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 /* Contacts  Section */
