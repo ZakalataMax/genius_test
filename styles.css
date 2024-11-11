@@ -1,7 +1,4 @@
-/* для зміни стилю всіх h2  
-h2 {  
-  color: blueviolet;
-} 
+/*
   зміна за атрибутами
  [type] {
 }
@@ -206,6 +203,9 @@ button {
 .traditions-content {
   max-width: 710px;
 }
+.traditions-baker-img {
+  border-radius: 400px 400px 0px 0px;
+}
 .traditions-section {
   padding-top: 96px;
 }
@@ -230,6 +230,11 @@ button {
   font-size: 40px;
   margin-bottom: 16px;
 }
+.chiefs-cards {
+  display: flex;
+  gap: 30px;
+}
+
 .chiefs-title {
   max-width: 520px;
   margin: 0 auto 80px;
@@ -295,7 +300,9 @@ button {
 /* Footer */
 footer {
   /* temp */
-  background-color: grey;
+  /* background-color: grey; */
+  background-image: url(/images/footer-background.png);
+  background-size: 100% 100%;
 }
 footer address {
   font-weight: 300;
